@@ -28,3 +28,13 @@ tasks:
       name: apache2
       state: started
       enabled: yes
+
+---
+hosts: all
+become: all
+tasks:
+ - name: Install wget
+   yum:
+    name: wget
+    state: present
+    
